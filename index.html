@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css"
+        integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- <link rel="stylesheet" href="swiper.css"> -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flex padding">
+        <div class="left_side margin">
+            <div class="icon_sec margin bg_grey">
+                <div class="flex align_item hover">
+                    <i class="ri-spotify-fill img_size  fill fixed"></i>
+                    <div style="font-size: 14px; margin-left: 27px;">Spotify</div>
+                </div>
+                <div class="flex align_item hover">
+                    <i class="ri-home-5-line img_size margin"></i>
+                    <div style="font-size: 14px fixed " class="margin">Home</div>
+                </div>
+                <div class="flex align_items hover">
+                    <i class="ri-search-line img_size margin"></i>
+                    <div style="font-size: 14px " class="margin">Search</div>
+                </div>
+            </div>
+            <div class="library margin bg_grey">
+                <div class="flex align_items">
+                    <div class="hover flex align_items">
+                        <i class="ri-database-2-line img_size margin"></i>
+                        <div style="font-size: 14px " class="margin">Your Library</div>
+                    </div>
+                    <i class="ri-add-line img_size margin add_library hover" id="show" onclick="showFavSongContainer()"></i>
+                    <i class="ri-add-line img_size margin add_library hover none" id="hide" onclick="hideFavSongContainer()"></i>
+                </div>
+
+            </div>
+
+            <div class="fav-song-container overflowY none">
+
+            </div>
+
+
+            <div class="padding margin bg_grey" id="createplaylist">
+                <h3>Create your playlist</h3>
+                <p>It's easy, we will help you</p>
+                <button class="create_playlist border_radius hover_button">
+                    Create playlist
+                </button>
+            </div>
+            <div class="padding margin bg_grey" id="letfind">
+                <h3>Let find some podcast to follow</h3>
+                <p>We'll keep you updateed on new episodes</p>
+                <button class="create_playlist border_radius hover_button">
+                    Browse podcasts
+                </button>
+            </div>
+        </div>
+
+        <!-- right side -->
+        <div class="right_side marginx bg_grey relative">
+            <nav class="navbar flex">
+                <div>
+                    <i class="ri-arrow-left-s-line arrow"></i>
+                    <i class="ri-arrow-right-s-line arrow"></i>
+                </div>
+                <div class=" hover " id="hamberger" style="margin-left: 1em; ">
+                    <i class="ri-spotify-fill " style="font-size: 2em;"></i>
+
+                </div>
+
+                <div class="navbar_button">
+                    <button class="hover_button" id="explore">Explore Premium</button>
+                    <button class="hover_button">
+                        <i class="ri-download-cloud-line"></i>
+                        <span>Install App</span>
+                    </button>
+                    <button class="hover_button">
+                        <i class="ri-notification-3-line"></i>
+                    </button>
+                    <button class="hover_button">
+                        <i class="ri-user-line"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <section class="playlist_sec">
+                <h2>Recently Played</h2>
+                <!-- slide create himself -->
+                <div class="playlist flex overflow">
+
+                    <!-- <div class="demo">
+                        <div class="container">
+                            <div class="card_container">
+                                <img src="images/OIP.jpeg" alt="image" />
+                            </div>
+                            <div class="overflow height_h2">
+                                <h3>Song Name fgf dfgg dfgfdg </h3>
+                            </div>
+                            <div class="overflow height_p">
+                                <p>artist name </p>
+                            </div>
+
+                            <div class="play"><i class="ri-play-mini-fill"></i></div>
+                        </div>
+                    </div> -->
+
+                </div>
+
+                <!-- create slide using swiperjs -->
+                <h2>Latest Song</h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+
+                    </div>
+
+                </div>
+
+                <!-- slide property using flex wrap -->
+                <div class="artist">
+                    <div class="flex align_item justify_space_between" style="width: 95%;">
+                        <h2>Artists</h2>
+                        <span class="show_all">Show All</span>
+                    </div>
+
+
+                    <div class="playlist flex flex_wrap border overflow">
+                        <div class="container">
+                            <div class="card_container">
+                                <img src="images/OIP.jpeg" alt="image" />
+                            </div>
+                            <div class="overflow height_h2">
+                                <h3>Song Name sd fds dfdfsd fsd</h3>
+                            </div>
+                            <div class="overflow height_p">
+                                <p>artist name fsdfd fdsfd sfds bcbvbvc</p>
+                            </div>
+
+                            <div class="play"><i class="ri-play-mini-fill"></i></div>
+                        </div>
+                        <div class="container">
+                            <div class="card_container">
+                                <img src="images/OIP.jpeg" alt="image" />
+                            </div>
+                            <div class="overflow height_h2">
+                                <h3>Song Name sdfdsdfdfsdfsd</h3>
+                            </div>
+                            <div class="overflow height_p">
+                                <p>artist name fsdfd fdsfd sfds bcbvbvc</p>
+                            </div>
+
+                            <div class="play"><i class="ri-play-mini-fill"></i></div>
+                        </div>
+                        <div class="container">
+                            <div class="card_container">
+                                <img src="images/OIP.jpeg" alt="image" />
+                            </div>
+                            <div class="overflow height_h2">
+                                <h3>Song Name sdfdsdfdfsdfsd</h3>
+                            </div>
+                            <div class="overflow height_p">
+                                <p>artist name fsdfd fdsfd sfds bcbvbvc</p>
+                            </div>
+
+                            <div class="play"><i class="ri-play-mini-fill"></i></div>
+                        </div>
+                        <div class="container">
+                            <div class="card_container">
+                                <img src="images/OIP.jpeg" alt="image" />
+                            </div>
+                            <div class="overflow height_h2">
+                                <h3>Song Name sdfdsdfdfsdfsd</h3>
+                            </div>
+                            <div class="overflow height_p">
+                                <p>artist name fsdfd fdsfd sfds bcbvbvc</p>
+                            </div>
+
+                            <div class="play"><i class="ri-play-mini-fill"></i></div>
+                        </div>
+                        <div class="container">
+                            <div class="card_container">
+                                <img src="images/OIP.jpeg" alt="image" />
+                            </div>
+                            <div class="overflow height_h2">
+                                <h3>Song Name sdfdsdfdfsdfsd</h3>
+                            </div>
+                            <div class="overflow height_p">
+                                <p>artist name fsdfd fdsfd sfds bcbvbvc</p>
+                            </div>
+
+                            <div class="play"><i class="ri-play-mini-fill"></i></div>
+                        </div>
+                        <div class="container">
+                            <div class="card_container">
+                                <img src="images/OIP.jpeg" alt="image" />
+                            </div>
+                            <div class="overflow height_h2">
+                                <h3>Song Name sdfds dfdfsd fsd</h3>
+                            </div>
+                            <div class="overflow height_p">
+                                <p>artist name fsdfd fdsfd sfds bcbvbvc</p>
+                            </div>
+
+                            <div class="play"><i class="ri-play-mini-fill"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_img flex align_items ">
+
+        </div>
+        <div class="controller ">
+            <div class="progress flex justify_space_between">
+                <div>
+                    <i class="ri-shuffle-fill " style="font-size: 1.3em;"></i>
+                    <i class="ri-skip-left-fill"></i>
+                </div>
+                <div class="play_pause relative ">
+                    <i class="ri-play-circle-line"></i>
+                    <i class="ri-pause-circle-line none"></i>
+                </div>
+                <div class="next">
+                    <i class="ri-skip-right-fill "></i>
+                    <i class="ri-arrow-go-forward-fill" style="font-size: 1.3em;"></i>
+                </div>
+            </div>
+            <div class="duration-slider flex">
+                <p>00:00</p>
+                <input type="range" min="0" id="duration" value="0">
+                <p>00:00</p>
+            </div>
+        </div>
+        <div class="audio_controller ">
+            <i class="ri-volume-up-line" title="Speaker" style="display: none;"></i>
+            <i class="ri-volume-mute-line" title="Mute"></i>
+            <input type="range" id="volume" min="0">
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="swiperjs.js"></script>
+<script src="script.js"></script>
+
+</html>

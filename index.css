@@ -1,0 +1,406 @@
+/* we can't rotate i tag element directly but rotate its parent  div */
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    color: rgb(150, 150, 150);
+}
+*:hover{
+    color:white
+}
+:root{
+    --text-color: white;
+    --bg-color:black
+}
+body{
+    margin: 0;
+    padding:0;
+    
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 100vw;
+    position: relative;
+}
+.left_side{
+    width: 22vw;
+    height: 85vh;
+    min-width: 220px;
+    min-height: 82vh;
+    position: fixed;
+    
+}
+.right_side{
+    margin-left: 22vw;
+    width: 78vw;
+    height: 85vh;
+    
+    overflow: auto;
+    overflow-x: hidden;
+}
+/* left side */
+.icon_sec{
+    height: 90px;
+    
+}
+.library{
+    position: relative;
+}
+.add_library{
+    position: absolute;
+    right: 10px;
+}
+.fav-song-container{
+    margin-top: .3em;
+    height: 63vh;
+}
+
+.fav-song{
+    position: relative;
+    align-items: center;
+    div{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.fav-song:hover i{
+    display: block !important;
+    position: absolute;
+    right: 0;
+    background-color: black;
+}
+.fav-song img{
+    height: 5vh;
+    width: 5vh;
+    object-fit: cover;
+    margin: .3em;
+    margin-right: .6em;
+    
+}
+.create_playlist{
+    font-size: 16px;
+    padding: 6px;
+}
+
+/* right_side */
+.navbar{
+    padding: 20px;
+    top: 0;
+    width:75vw;
+    position: fixed;
+    right: calc(5px + 1vw);
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    background-color: rgb(37, 37, 37);
+    opacity: .8;
+    
+}
+
+.arrow{
+    font-size: 30px;
+    background-color: black;
+    border-radius: 50%;
+    margin:10px 10px 0 10px;
+}
+
+.navbar_button button{
+    
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+}
+#explore{
+    color: black;
+    background-color: white;
+}
+/* playlist container */
+.playlist_sec{
+    margin-left:20px;
+    width: 100%;
+    gap: 10px;
+    
+    margin-top: 65px;
+}
+.playlist{
+    width: 98%;
+    flex-grow: 1;
+    height: 18.5vw;
+    min-height: 230px;
+    
+}
+.demo {
+    transition: transform 0.5s ease-out;
+  }
+.container{
+    height:18vw;
+    width: 12vw;
+    min-height: 220px;
+    min-width: 140px;
+    padding: 10px;
+    border-radius: 5%;
+    margin: 0 29px;
+    background-color: black;
+    position: relative;
+    z-index: 5;
+   
+}
+.play{
+    background-color: green;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    top: 38%;
+    right: 10%;
+    opacity: 0;
+    
+}
+.container i{
+    color:black;
+    z-index: 30;
+    position: absolute; 
+    right: 4%;
+    font-size: 2.5em;
+    top: 4%;
+    
+}
+.card_container{
+    height: 62%;
+    width: 98%;
+    border-radius: 5%;
+    margin: auto;
+}
+.card_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3%;
+}
+
+.demo{
+    width:23%;
+    min-width: 200px;
+    
+}
+.demo h3{
+    line-height: 1.1;
+}
+ /* card container hover property */
+.container:hover {
+    background-color: rgb(37, 37, 37);;
+    transform: scale(1.1) ;
+}  
+.container:hover .play{
+    opacity: 1;
+}
+
+.swiper{
+    width: 95%;
+    background-color: rgb(37, 37, 37);;
+}
+.swiper-slide {
+    background-color: rgb(37, 37, 37);;
+}
+
+/* Artist Section*/
+.show_all:hover{
+    color: blue;
+    text-decoration:underline;
+}
+
+.artist .card_container{
+    border-radius: 50%;
+    
+}
+.artist img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* scroll bar */
+::-webkit-scrollbar{
+    width: 1em;
+    
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+body:hover ::-webkit-scrollbar-thumb{
+    background-color: rgb(103, 103, 103);
+}
+
+/* footer section */
+.footer{
+    height: 11vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.footer_img{
+    height: 100%;
+    width: 22%;
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.footer_img img{
+    height: 100%;
+    width: 25%;
+    object-fit: cover;
+    margin-left: 7px;
+    margin-right: 4px
+}
+.footer_img> div{
+    
+    width: 60%;
+    h3{
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        margin: .3em 0;
+    }
+    p{
+        white-space: nowrap;
+        overflow:hidden;
+        text-overflow: ellipsis;
+    
+    }
+}
+.controller{
+    position: relative;
+   
+   
+    width: 40%;
+   
+}
+.progress{
+    color: white;
+    
+    width: 45%;
+    min-width: 220px;
+    margin: auto;
+    
+}
+.progress div:first-child, .progress div:last-child{
+    margin-top: .6em;
+}
+.progress div:first-child i{
+    margin-right: .6em;
+}
+.progress div:last-child i{
+    margin-left: .8em;
+}
+.controller i{
+    font-size: 1.5em;
+    
+    
+}
+.play_pause{
+    width: 2.5em;
+    position: relative;
+    
+}
+.play_pause i{
+    font-size: 2.3em;
+    position: absolute;
+    
+}
+
+/* duration slider */
+.duration-slider{
+    margin-top: 1em;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8em;
+}
+
+#duration{
+    width: 80%;
+    accent-color: rgb(223, 224, 225);
+    height: 4px;
+}
+#duration:hover{
+    accent-color: rgb(37, 140, 219);
+}
+/* sound controller */
+.audio_controller{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#volume {
+    accent-color: rgb(223, 224, 225);
+    height: 5px;
+    margin-left: 3px;
+    
+}
+#volume:hover{
+    accent-color: rgb(37, 140, 219);
+}
+.selected{
+    color: red;
+}
+
+/* mediaquery for less than  1000px */
+#hamberger{
+    display: none;
+}
+@media screen and (max-width : 1000px ){
+    .left_side {
+        position:absolute;
+        z-index: 100;
+        left: -100%;
+    }
+    .right_side{
+        width: 100vw !important;
+        margin-left: 5px !important;
+    }
+    .navbar{
+        width: 100vw;
+        margin-right: calc(5px + 1vw);
+    }
+    .navbar>:first-child{
+        display: none;
+    }
+    #hamberger{
+        display: inline;
+    }
+}    
+.rotate{
+    transform:  rotate(180deg);
+    transition: all .5s;
+    z-index: 20;
+}
+.left_side_hover{
+    left: 0;
+    top: 4em;
+    background-color: black;
+}
+@media screen and (max-width : 1000px ){
+    .audio_controller{
+        display: none;
+    }
+    
+
+    .controller{
+        height: 100%;
+        width: 100%;
+    }
+}
+
