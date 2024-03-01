@@ -71,7 +71,7 @@ function createBollywoodCard(title) {
 
 // Get all the names and attributes from bollywood song folder
 async function bollywoodSong() {
-  let data = await fetch("http://127.0.0.1:5502/bollywood songs/");
+  let data = await fetch("https://github.com/biswajitpanda1234/4.-music-player/bollywood songs/");
 
   let response = await data.text();
 
@@ -160,7 +160,7 @@ swiperContainer.addEventListener("mousemove", () => {
 });
 
 async function internationalSong() {
-  let data = await fetch("http://127.0.0.1:5502/international songs");
+  let data = await fetch("https://github.com/biswajitpanda1234/4.-music-player/international songs");
 
   let response = await data.text();
 
